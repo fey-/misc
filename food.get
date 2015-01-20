@@ -21,7 +21,7 @@ curl -s https://raw.githubusercontent.com/fey-/misc/master/food.opts -o $FoodOpt
 food=$(wc -l < $FoodOptions)
 
 #Getting some random numbers
-randnum=$(( $RANDOM % $food ))
+randnum=$(( $RANDOM % $food +1 ))
 
 #Outputting it
 cat $FoodOptions | sed -n "$randnum"p
