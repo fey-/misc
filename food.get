@@ -15,7 +15,7 @@ if [ -f $FoodOptions ]; then
 fi
 
 #Grabbing the latest food.get file
-curl -s https://raw.githubusercontent.com/fey-/misc/master/food.get -o $FoodOptions
+curl -s https://raw.githubusercontent.com/fey-/misc/master/food.opts -o $FoodOptions
 
 #Getting the lines
 food=$(wc -l < $FoodOptions)
