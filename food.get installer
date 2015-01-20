@@ -1,0 +1,12 @@
+/bin/bash
+
+# I steal things from the internet and then fail at making them better.
+#
+# Matt Carr
+# matt.carr@utexas.edu
+# Food.Get goes in /usr/local/bin
+
+#Grabbing the latest food.get file
+sudo curl -s https://raw.githubusercontent.com/fey-/misc/master/food.get -o /usr/local/bin/food.get && chmod a+x /usr/local/bin/food.get
+
+exit 0
