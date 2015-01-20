@@ -10,8 +10,9 @@
 FoodOptions=/tmp/food.opts
 
 #performing some clean up just in case
-if [[ -f $FoodOptions ]] then
-	rm $FoodOptions
+if [[ -f $FoodOptions ]]
+	then
+		rm $FoodOptions
 fi
 
 #Grabbing the latest food.get file
