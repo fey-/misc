@@ -19,7 +19,7 @@ fi
 curl -s https://raw.githubusercontent.com/fey-/misc/master/food.get -o $FoodOptions
 
 #Getting the lines
-food=$(wc -l < /tmp/food.get)
+food=$(wc -l < $FoodOptions)
 
 #Getting some random numbers
 randnum=$(( $RANDOM % $food ))
