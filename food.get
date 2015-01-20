@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# I steal things from the internet and then fail at making them better.
+#
+# Matt Carr
+# matt.carr@utexas.edu
+# Food.Get goes in /usr/local/bin
+
+
+FoodOptions=/tmp/food.opts
+
+#performing some clean up just in case
+if [[ -f $FoodOptions ]] then
+	rm $FoodOptions
+fi
+
+#Grabbing the latest food.get file
+curl -s https://raw.githubusercontent.com/fey-/misc/master/food.get -o $FoodOptions
+
+#Getting the lines
+food=$(wc -l < /tmp/food.get)
+
+#Getting some random numbers
+randnum=$(( $RANDOM % $food ))
+
+#Outputting it
+cat $FoodOptions | sed -n "$randnum"p
+
+exit 0
