@@ -10,8 +10,7 @@
 FoodOptions=/tmp/food.opts
 
 #performing some clean up just in case
-if [ -f "$FoodOptions" ]
-then
+if [ -f $FoodOptions ]; then
 		rm -rf $FoodOptions
 fi
 
